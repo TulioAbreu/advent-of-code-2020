@@ -14,10 +14,7 @@ function parseToPassword(inputLine) {
 
 function isValidPassword(passwordInput) {
     const { firstIndex, secondIndex, letter, password } = passwordInput;
-    let counter = 0;
-    if (password[firstIndex - 1] === letter) counter++;
-    if (password[secondIndex - 1] === letter) counter++;
-    return counter === 1;
+    return (password[firstIndex - 1] === letter) ^ (password[secondIndex - 1] === letter)
 }
 
 (function main() {
