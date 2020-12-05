@@ -26,4 +26,4 @@ findLine (x:xs) minValue maxValue
 main :: IO()
 main = do
     fileContent <- readFile "./input.txt"
-    print (maxElement (map (\line -> getPositionID line) (lines fileContent)) 0)
+    print ("Highest seat ID " ++ show (maxElement (map (\line -> getPositionID line) (lines fileContent)) 0))

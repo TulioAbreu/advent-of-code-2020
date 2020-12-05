@@ -34,4 +34,4 @@ main :: IO ()
 main = do
     fileContent <- readFile "./input.txt"
     let (idsHead:idsTail) = quicksort1 (map (\line -> getPositionID line) (lines fileContent))
-    print (checkArray (idsHead:idsTail) (idsHead-1))
+    print ("My seat ID is " ++ show (checkArray (idsHead:idsTail) (idsHead-1)))
